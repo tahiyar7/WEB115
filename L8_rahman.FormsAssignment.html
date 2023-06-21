@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation with Regular Expressions</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  input[type="text"] {
+    width: 96%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <h1>Form Validation with Regular Expressions</h1>
+<form id="myForm" method="POST" onsubmit="return validation() || myFunction() || mySubmitFunction(event)">
+<label for="inputField">Alphanumeric Input:</label>
+<legend><b>Alphanumeric Systems Email Format</b></legend>
+<div id = "output"> </div>
+<p id="demo"></p>     
+          <label for="email">Enter email to check for alphaneumaric string. First enter email>Submit>type "t">click "Validate random string" and ignore the error. Check some strings to get confirmed email has submitted. Thanks!</label>
+          <input type="email" placeholder="Enter your Email-id" class="form-group" name="email"><br>
+          <span id="mail" class="text-danger font-weight-bold"></span>
+          <button type="submit">Submit</button><br>
+          <button onClick = "getInputAndValidate()"> Validate random string </button><br>
+          <button type="reset" >Cancel</button>
+</form>
+
+ <script src="L8_rahman.validationScript.js">
+  const element = document.getElementById("submit");
+element.addEventListener("click", myFunction);
+ </script>
+
+ </body>
+</html>
+  
