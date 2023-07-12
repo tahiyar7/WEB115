@@ -1,0 +1,395 @@
+<html>
+
+<head>
+
+  <title>Build Your Meal Plan</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="startTime()" onload="startTimeOne()" onload="startTimeTwo()" onload="startTimeThree" onload="startTimeFour()" onload="startTimeFive()" onload="startTimeSix()">
+
+  <nav class="nav nav--active">
+
+    <ul class="nav__list">
+
+      <li class="nav__item">
+        <a href="" class="nav__link">
+          <div class="nav__thumb color1" data-letter="M"></div>
+          <p class="nav__label">Monday</p>
+        </a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">
+          <div class="nav__thumb color2" data-letter="T"></div>
+          <p class="nav__label">Tuesday</p>
+        </a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">
+          <div class="nav__thumb color3" data-letter="W"></div>
+          <p class="nav__label">Wednesday</p>
+        </a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">
+          <div class="nav__thumb color4" data-letter="T"></div>
+          <p class="nav__label">Thursday</p>
+        </a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">
+          <div class="nav__thumb color5" data-letter="F"></div>
+          <p class="nav__label">Friday</p>
+        </a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">
+          <div class="nav__thumb color6" data-letter="S"></div>
+          <p class="nav__label">Saturday</p>
+        </a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">
+          <div class="nav__thumb color7" data-letter="S"></div>
+          <p class="nav__label">Sunday</p>
+        </a>
+      </li>
+
+    </ul>
+
+    <div class="burger burger--close">
+      <div class="burger__patty"></div>
+    </div>
+
+  </nav>
+
+  <!--For Monday -->
+  <h1 id="current-time"></h1>
+  <div class="page" id="tabs">
+  <section class="section section--active color1" data-letter="M">
+    <article class="section__wrapper">
+        <div>
+          <h1 class="section__title" id="current-date" name="current-date"></h1>
+          <h1 id="current-time"></h1>
+          <script src="projectJS.js"></script>
+
+
+          <input onclick="change()" type="button" class="addButton" value="&plus; Add Meals" id="add-todo" />
+          <div class="to-do" id="to-do"><br><br>
+
+            <h3 class="mealstoplan">BREAKFAST, SNACK, LUNCH, SNACK & DINNER</h3>
+            <ul class="todo-list" id="todo-list">
+            </ul>
+
+          </div>
+
+          <div class="completed" id="completed"><br><br>
+            <h3 class="listmeals">List for your meal planner</h3>
+            <ul class="completed-list" id="completed-list">
+            </ul>
+
+          </div>
+
+          <div class="new-todo" id="new-todo" style="display:none;">
+            <form>
+
+              <p>
+                <label for="task" required>Enter Meals:</label>
+                <input type="text" class="task" name="task" id="task" required>
+              </p>
+
+              <p>
+                <label id="Clock" for="time" required>Time:</label>
+                <input type="time" class="time" name="time" id="time" required>
+              </p>
+
+            </form>
+            <script src="projectJS.js"></script>
+          </div>
+        </div>
+      </article>
+    </section>
+ <!--For Tuesday -->
+    <section class="section color2" data-letter="T">
+      <article class="section__wrapper">
+        <div>
+          <h1 class="section__title" id="current-date1" name="current-date1"></h1>
+            <script src="projectJS.js"></script>
+
+          <div class="Tuesday" id="Tuesday" class="tabcontent" name="Tuesday">
+            <input onclick="change()" type="button" class="addButton" value="&plus; Add Meals" id="add-todo1" />
+            <div class="to-do" id="to-do1"><br><br>
+              <h3 class="mealstoplan">BREAKFAST, SNACK, LUNCH, SNACK & DINNER:</h3>
+              <ul class="todo-list" id="todo-list1">
+              </ul>
+            </div>
+        <div class="completed" id="completed1"><br><br>
+              <h3 class="listmeals">LIST FOR YOUR MEAL PLANNER:</h3>
+              <ul class="completed-list" id="completed-list1">
+        </div>
+        <div class="new-todo" id="new-todo1" style="display:none;">
+              <form>
+                <p>
+                  <label for="task" required>Enter you meal</label>
+                  <input type="text" class="task" name="task" id="task1" required>
+                </p>
+                <p>
+                  <label id="Clock" for="time" required>WHEN:</label>
+                  <input type="time" class="time" name="time" id="time1" required>
+                </p>
+              </form>
+              <script>
+                function change() {
+                  document.getElementById("add-todo1").value = "+ more";
+                }
+              </script><script src="projectJS.js"></script>
+            </div></div></article></section>
+<!--For Wednesday-->
+    <section class="section color3" data-letter="W">
+      <article class="section__wrapper">
+        <div>
+          <h1 class="section__title" id="current-date2" name="current-date2"></h1>
+          <h1 id="current-time2"></h1>
+        </div>
+
+        <script src="projectJS.js"></script>
+
+        <div class="Wednesday" id="Wednesday" class="tabcontent" name="Wednesday">
+          
+          <input onclick="change()" type="button" class="addButton" value="&plus; Add Meals" id="add-todo2" />
+          <div class="to-do" id="to-do2"><br><br>
+            <h3 class="mealstoplan">BREAKFAST, SNACK, LUNCH, SNACK & DINNER</h3>
+            <ul class="todo-list" id="todo-list2">
+            </ul>
+          </div>
+
+          <div class="completed" id="completed2"><br><br>
+            <h3 class="listmeals">LIST FOR YOUR MEAL PLANNER:</h3>
+            <ul class="completed-list" id="completed-list2">
+            </ul>
+        </div>
+          <div class="new-todo" id="new-todo2" style="display:none;">
+            <form>
+              <p>
+                <label for="task" required>BREAKFAST, SNACK, LUNCH, SNACK & DINNER</label>
+                <input type="text" class="task" name="task" id="task2" required>
+              </p>
+              <p>
+                <label id="Clock" for="time" required>Time:</label>
+                <input type="time" class="time" name="time" id="time2" required>
+              </p>
+            </form>
+            <script>
+              function change() {
+                document.getElementById("add-todo2").value = "+ more";
+              }
+            </script>
+
+            <script src="projectJS.js"></script>
+          </div>
+        </div>
+
+      </article>
+    </section>
+<!--For Thursday-->
+    <section class="section color4" data-letter="T">
+      <article class="section__wrapper">
+
+        <div>
+          <h1 class="section__title" id="current-date3" name="current-date3"></h1>
+          <h1 id="current-time3"></h1>
+        </div>
+
+        <script src="projectJS.js"></script>
+
+        <div class="Thursday" id="Thursday" class="tabcontent" name="Thursday">
+          
+          <input onclick="change()" type="button" class="addButton" value="&plus; Add Meals" id="add-todo3" />
+          <div class="to-do" id="to-do3"><br><br>
+            <h3 class="mealstoplan">BREAKFAST, SNACK, LUNCH, SNACK & DINNER</h3>
+            <ul class="todo-list" id="todo-list3">
+            </ul>
+          </div>
+
+          <div class="completed" id="completed3"><br><br>
+            <h3 class="listmeals">LIST FOR YOUR MEAL PLANNER:</h3>
+            <ul class="completed-list" id="completed-list3">
+            </ul>
+        </div>
+          <div class="new-todo" id="new-todo3" style="display:none;">
+            <form>
+              <p>
+                <label for="task" required>Enter you meal</label>
+                <input type="text" class="task" name="task" id="task3" required>
+              </p>
+              <p>
+                <label id="Clock" for="time" required>Time:</label>
+                <input type="time" class="time" name="time" id="time3" required>
+              </p>
+            </form>
+            <script>
+              function change() {
+                document.getElementById("add-todo3").value = "+ more";
+              }
+            </script>
+
+            <script src="projectJS.js"></script>
+          </div>
+        </div>
+
+      </article>
+    </section>
+<!--Friday-->
+    <section class="section color5" data-letter="F">
+      <article class="section__wrapper">
+        <div>
+          <h1 class="section__title" id="current-date4" name="current-date4"></h1>
+          <h1 id="current-time4"></h1>
+        </div>
+
+        <script src="projectJS.js"></script>
+
+        <div class="Friday" id="Friday" class="tabcontent" name="Friday">
+          
+          <input onclick="change()" type="button" class="addButton" value="&plus; Add Meals" id="add-todo4" />
+          <div class="to-do" id="to-do4"><br><br>
+            <h3 class="mealstoplan">BREAKFAST, SNACK, LUNCH, SNACK & DINNER</h3>
+            <ul class="todo-list" id="todo-list4">
+            </ul>
+          </div>
+
+          <div class="completed" id="completed4"><br><br>
+            <h3 class="listmeals">LIST FOR YOUR MEAL PLANNER:</h3>
+            <ul class="completed-list" id="completed-list4">
+            </ul>
+         </div>
+          <div class="new-todo" id="new-todo4" style="display:none;">
+            <form>
+              <p>
+                <label for="task" required>Enter you meal:</label>
+                <input type="text" class="task" name="task" id="task4" required>
+              </p>
+              <p>
+                <label id="Clock" for="time" required>TIME:</label>
+                <input type="time" class="time" name="time" id="time4" required>
+              </p>
+            </form>
+            <script>
+              function change() {
+                document.getElementById("add-todo4").value = "+ more";
+              }
+            </script>
+
+            <script src="projectJS.js"></script>
+          </div>
+        </div>
+
+      </article>
+    </section>
+<!--Saturday-->
+    <section class="section color6" data-letter="S">
+      <article class="section__wrapper">
+        <div>
+          <h1 class="section__title" id="current-date5" name="current-date5"></h1>
+          <h1 id="current-time5"></h1>
+        </div>
+
+        <script src="projectJS.js">
+          
+        </script>
+
+        <div class="Saturday" id="Saturday5" class="tabcontent" name="Saturday">
+          
+          <input onclick="change()" type="button" class="addButton" value="&plus; Add Meals" id="add-todo5" />
+          <div class="to-do" id="to-do5"><br><br>
+            <h3 class="mealstoplan">BREAKFAST, SNACK, LUNCH, SNACK & DINNER:</h3>
+            <ul class="todo-list" id="todo-list5">
+            </ul>
+          </div>
+
+          <div class="completed" id="completed5"><br><br>
+            <h3 class="listmeals">LIST FOR YOUR MEAL PLANNER:</h3>
+            <ul class="completed-list" id="completed-list5">
+            </ul>
+          </div>
+          <div class="new-todo" id="new-todo5" style="display:none;">
+            <form>
+              <p>
+                <label for="task" required>Enter you meal:</label>
+                <input type="text" class="task" name="task" id="task5" required>
+              </p>
+              <p>
+                <label id="Clock" for="time" required>Time:</label>
+                <input type="time" class="time" name="time" id="time5" required>
+              </p>
+            </form>
+            <script>
+              function change() {
+                document.getElementById("add-todo5").value = "+ more";
+              }
+            </script><script src="projectJS.js"></script>
+          </div>
+        </div>
+
+      </article>
+    </section>
+<!--Sunday-->
+    <section class="section color7" data-letter="S">
+      <article class="section__wrapper">
+        <div>
+          <h1 class="section__title" id="current-date6" name="current-date6"></h1>
+          <h1 id="current-time6"></h1>
+        </div>
+
+        <script src="projectJS.js"></script>
+
+        <div class="Sunday" id="Sunday6" class="tabcontent" name="Sunday">
+          
+          <input onclick="change()" type="button" class="addButton" value="&plus; Add Meals" id="add-todo6" />
+          <div class="to-do" id="to-do6"><br><br>
+            <h3 class="mealstoplan">BREAKFAST, SNACK, LUNCH, SNACK & DINNER:</h3>
+            <ul class="todo-list" id="todo-list6">
+            </ul>
+          </div>
+
+          <div class="completed" id="completed6"><br><br>
+            <h3 class="listmeals">LIST FOR YOUR MEAL PLANNER:</h3>
+            <ul class="completed-list" id="completed-list6">
+            </ul>
+          </div>
+          <div class="new-todo" id="new-todo6" style="display:none;">
+            <form>
+              <p>
+                <label for="task" required>Enter you meal:</label>
+                <input type="text" class="task" name="task" id="task6" required>
+              </p>
+              <p>
+                <label id="Clock" for="time" required>WHEN:</label>
+                <input type="time" class="time" name="time" id="time6" required>
+              </p>
+            </form>
+            <script>
+              function change() {
+                document.getElementById("add-todo6").value = "+ more";
+              }
+            </script><script src="projectJS.js">
+               </script>
+          </div>
+        </div>  </article>
+    </section>
+</div>
+</body>
+<script src="projectJS.js"></script>
